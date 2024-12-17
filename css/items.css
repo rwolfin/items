@@ -1,0 +1,197 @@
+/* Общие стили */
+• {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif; 
+}
+
+/* Контейнер */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+ 
+}
+
+/* Сеточная система (Grid) */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 колонок */
+}
+
+/* Классы для задания ширины колонок */
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  grid-column: span auto; 
+}
+
+.col-1 { grid-column: span 1; } .col-2 { grid-column: span 2; } .col-3 { grid-column: span 3; } .col-4 { grid-column: span 4; } .col-5 { grid-column: span 5; } .col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; } .col-8 { grid-column: span 8; } .col-9 { grid-column: span 9; } .col-10 { grid-column: span 10; } .col-11 { grid-column: span 11; } .col-12 { grid-column: span 12; }
+
+
+/* Классы для задания зазора между элементами в сетке */
+.gap-5, .gap-10, .gap-15, .gap-20, .gap-25, .gap-30, .gap-35, .gap-40, .gap-45, .gap-50, .gap-60, .gap-65, .gap-70, .gap-75, .gap-80 {
+    margin: 0 !important;
+  }
+  
+.gap-5 { grid-gap: 5px; } .gap-10 { grid-gap: 10px; } .gap-15 { grid-gap: 15px; } .gap-20 { grid-gap: 20px; } .gap-25 { grid-gap: 25px; } .gap-30 { grid-gap: 30px; } .gap-35 { grid-gap: 35px; } 
+.gap-40 { grid-gap: 40px; } .gap-45 { grid-gap: 45px; } .gap-50 { grid-gap: 50px; } .gap-60 { grid-gap: 60px; } .gap-65 { grid-gap: 65px; } .gap-70 { grid-gap: 70px; } .gap-75 { grid-gap: 75px; } .gap-80 { grid-gap: 80px; }
+
+
+/* Flexbox */
+.item-flex {display: flex;} .items-center { align-items: center;} .items-start {align-items: flex-start;} .items-end {align-items: flex-end;} .items-stretch {align-items: stretch;} .justify-center {justify-content: center;} 
+.justify-start { justify-content: flex-start;} .justify-end {justify-content: flex-end;} .justify-between {justify-content: space-between;} .justify-around {justify-content: space-around;}
+
+.row { 
+  display:flex;
+  flex-wrap:wrap;
+}
+
+/* Используйте media queries для адаптации  */
+
+
+/* Пример секции */
+.section {
+  padding: 40px 0;
+}
+
+
+
+/* Мобильное меню (улучшенное) */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+  padding: 15px;
+  border-bottom: 1px solid #ddd; /* Разделитель */
+}
+
+5.item-logo {
+  flex: 0 0 auto; /* Занимает необходимое пространство */
+  margin-right: 20px;
+}
+
+.item-logo img {
+  max-width: 150px; /* Максимальная ширина логотипа */
+}
+
+.item-burger {
+  display: block; /* Кнопка бургер-меню видна на маленьких экранах */
+  cursor: pointer;
+  font-size: 24px; /* Размер иконки */
+}
+
+.item-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Расстояние между элементами меню */
+  justify-content: space-between;
+}
+
+.item-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.item-list li {
+  margin: 0 10px;
+}
+
+.item-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Скрываем меню на больших экранах */
+@media (min-width: 992px) {
+  .item-burger {
+    display: none;
+  }
+  .item-menu {
+    flex-direction: row; /* Меню в одну строку */
+    flex-wrap: nowrap; /* Элементы не переносятся на новую строку */
+  }
+}
+
+
+/* Media Queries - адаптация сетки под разные размеры экранов */
+@media (max-width: 1023px) {
+  .item-grid {
+    grid-template-columns: repeat(6, 1fr); /* 6 колонок */
+  }
+}
+
+@media (max-width: 767px) {
+  .item-grid {
+    grid-template-columns: 1fr; /* 1 колонка */
+  }
+  body {
+    margin-top: 4rem;
+  }
+  .item-body {
+    height: 50px;
+    padding: 0 10px;
+    justify-content: space-between;
+    align-items: center; /* Центрирование по вертикали */
+    display: flex; /* Необходимо для justify-content */
+  }
+  .item-menu {
+    display: none; /* Скрываем меню по умолчанию*/
+  }
+  .item-menu.active{
+    display: block; /* Показываем по клику на бургер */
+  }
+  .footer-flex.gap-50 {
+    flex-direction: column;
+  }
+  ul.pagination {
+    gap: 10px;
+  }
+  .menu {
+    top: 0;
+  }
+  h2.hedline {
+    font-size: 27px;
+  }
+  .item-ugol-4:before {
+    display: none;
+  }
+  #content {
+    padding-top: 10px;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .item-well {
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex.flexy-momile {
+    gap: 50px;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  .services:before,
+  .tech:before,
+  .item-ser:before {
+    width: 0;
+  }
+  .col-1.gap-25 .flex {
+    flex-direction: column;
+  }
+  .item-label {
+    display: block;
+    width: 100%;
+  }
+}
