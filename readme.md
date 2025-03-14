@@ -1,4 +1,4 @@
-![logo items](./assets/logo.jpg)
+
 # items.css
 
 ## Описание
@@ -126,5 +126,4 @@
 </ul>
 ```
 
-## Лицензия
-Этот проект распространяется под лицензией MIT.
+![logo items](./assets/logo.jpg)
