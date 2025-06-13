@@ -178,13 +178,13 @@
   border-color: #0a58ca;
 }
 
-.btn-success {
+.btn-green {
   color: #fff;
   background-color: #198754;
   border-color: #198754;
 }
 
-.btn-success:hover {
+.btn-green:hover {
   background-color: #157347;
   border-color: #146c43;
 }
