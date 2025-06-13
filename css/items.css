@@ -189,13 +189,13 @@
   border-color: #146c43;
 }
 
-.btn-danger {
+.btn-read {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
 }
 
-.btn-danger:hover {
+.btn-read:hover {
   background-color: #bb2d3b;
   border-color: #b02a37;
 }
